@@ -119,8 +119,8 @@
 
     <TextView
         android:id="@+id/grayback"
-        android:layout_width="384dp"
-        android:layout_height="238dp"
+        android:layout_width="376dp"
+        android:layout_height="302dp"
         android:layout_marginTop="100dp"
         android:background="@drawable/grayback"
         android:visibility="visible"
@@ -133,7 +133,7 @@
         android:id="@+id/darkback"
         android:layout_width="331dp"
         android:layout_height="158dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="436dp"
         android:background="@drawable/darkblueback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -210,6 +210,45 @@
         app:layout_constraintTop_toTopOf="@+id/user" />
 
     <TextView
+        android:id="@+id/carresult"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="36dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/darkback"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/cal"
+        app:layout_constraintTop_toBottomOf="@+id/everyday" />
+
+    <TextView
+        android:id="@+id/portineresult"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="64dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/darkback"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/cal"
+        app:layout_constraintTop_toBottomOf="@+id/everyday" />
+
+    <TextView
+        android:id="@+id/fatresult"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="92dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/darkback"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/cal"
+        app:layout_constraintTop_toBottomOf="@+id/everyday" />
+
+    <TextView
         android:id="@+id/result"
         android:layout_width="77dp"
         android:layout_height="22dp"
@@ -234,18 +273,6 @@
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/age2"
         app:layout_constraintTop_toBottomOf="@+id/user" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="110dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/loginbar"
-        android:text="分析"
-        app:layout_constraintBottom_toTopOf="@+id/darkback"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edheight"
@@ -288,11 +315,11 @@
         android:id="@+id/kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="88dp"
         android:text="公斤"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/grayback"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toEndOf="@+id/edweight" />
 
     <TextView
@@ -364,23 +391,25 @@
         android:id="@+id/sex"
         android:layout_width="231dp"
         android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/gender"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419">
+        app:layout_constraintVertical_bias="0.432">
 
         <RadioButton
             android:id="@+id/boy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/yellow"
             android:checked="true"
             android:gravity="start"
             android:text="男"
             android:textSize="20sp" />
+        />
 
         <RadioButton
             android:id="@+id/girl"
@@ -389,11 +418,73 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="-44dp"
             android:layout_weight="1"
+            android:buttonTint="@color/yellow"
             android:gravity="end"
             android:text="女"
             android:textSize="20sp" />
 
     </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/work"
+        android:layout_width="180dp"
+        android:layout_height="157dp"
+
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/grayback"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="@+id/grayback">
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/yellow"
+            android:checked="true"
+            android:text="不活躍"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/low"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/yellow"
+            android:checked="true"
+            android:text="低度活躍"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/active"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/yellow"
+            android:text="活躍"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/highactive"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/yellow"
+            android:text="高度活躍"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/loginbar"
+
+        android:text="分析"
+        app:layout_constraintBottom_toTopOf="@+id/darkback"
+        app:layout_constraintEnd_toEndOf="@+id/grayback"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/work" />
+
 
     <!--        <Button-->
 <!--        android:state_pressed="false"-->

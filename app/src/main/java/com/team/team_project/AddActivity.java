@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class AddActivity extends AppCompatActivity {
     Button tablebutton;
@@ -49,5 +52,11 @@ public class AddActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+//        Bundle bundle = getIntent().getExtras();
+//        TextView result = bundle.getString("TDEE");
+//        DecimalFormat nf = new DecimalFormat("0");
+//        result = (TextView) findViewById(R.id.TDEE);
+//        result.setText(nf.format(TDEE));
+
     }
 }
