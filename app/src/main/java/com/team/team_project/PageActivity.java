@@ -49,7 +49,11 @@ public class PageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PageActivity.this, AddActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("TEDD",result.getText().toString());
+//                intent.putExtras(bundle);   記得put進去，不然資料不會帶過去哦
                 startActivity(intent);
+
             }
         });
         tablebutton = findViewById(R.id.table);
@@ -66,6 +70,14 @@ public class PageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PageActivity.this, Food.class);
+                startActivity(intent);
+            }
+        });
+        chatbutton = findViewById(R.id.chat);
+        chatbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PageActivity.this,Chat.class);
                 startActivity(intent);
             }
         });
@@ -231,13 +243,7 @@ public class PageActivity extends AppCompatActivity {
                         break;
                 }
             }
-//            Intent intent = new Intent();
-//            intent.setClass(PageActivity.this, AddActivity.class);
-//                 Bundle bundle = new Bundle();
-//                    bundle.putString("TEDD",result.getText().toString());
-//                    intent.putExtras(bundle);   // 記得put進去，不然資料不會帶過去哦
-//
-//                startActivity(intent);
+
             };
         };
     };

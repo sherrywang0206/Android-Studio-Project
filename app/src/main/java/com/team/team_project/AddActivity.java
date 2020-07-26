@@ -15,6 +15,7 @@ public class AddActivity extends AppCompatActivity {
     Button foodbutton;
     Button profilebutton;
     Button chatbutton;
+    Button addbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,22 @@ public class AddActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        Bundle bundle = getIntent().getExtras();
+        addbutton = findViewById(R.id.additem);
+        addbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddActivity.this,AddDetail.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+//        Bundle bundle= getIntent().getExtras();
+
 //        TextView result = bundle.getString("TDEE");
+//        result = findViewById(R.id.totalresult);
+//        result=bundle.getString("TDEE");
 //        DecimalFormat nf = new DecimalFormat("0");
 //        result = (TextView) findViewById(R.id.TDEE);
 //        result.setText(nf.format(TDEE));
