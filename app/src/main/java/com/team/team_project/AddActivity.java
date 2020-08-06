@@ -1,26 +1,41 @@
 package com.team.team_project;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
 
-public class AddActivity extends AppCompatActivity {
+import java.text.DecimalFormat;
+import java.util.logging.Formatter;
+
+
+public class AddActivity extends Activity {
     Button tablebutton;
     Button foodbutton;
     Button profilebutton;
     Button chatbutton;
     Button addbutton;
+    TextView totalcar;
 
+
+
+
+
+    private GlobalV gv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DecimalFormat nf = new DecimalFormat("0");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+//        GV g= (GV) getApplicationContext();
+         gv= (GlobalV) getApplication();
+
         tablebutton  = findViewById(R.id.table);
         tablebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,17 +76,13 @@ public class AddActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+//        test=20.0;
+    totalcar = findViewById(R.id.totalresult);
+//    gv.setCal(140.0);
+    totalcar.setText((nf.format( gv.getCal())));
 
 
 
-//        Bundle bundle= getIntent().getExtras();
-
-//        TextView result = bundle.getString("TDEE");
-//        result = findViewById(R.id.totalresult);
-//        result=bundle.getString("TDEE");
-//        DecimalFormat nf = new DecimalFormat("0");
-//        result = (TextView) findViewById(R.id.TDEE);
-//        result.setText(nf.format(TDEE));
 
     }
 }
