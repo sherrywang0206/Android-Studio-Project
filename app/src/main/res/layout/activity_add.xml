@@ -6,12 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
 
-
-
     <TextView
         android:id="@+id/bluebar"
-        android:layout_width="426dp"
-        android:layout_height="78dp"
+        android:layout_width="458dp"
+        android:layout_height="64dp"
         android:background="@color/darkblue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,15 +19,17 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/back"
-        android:layout_width="449dp"
-        android:layout_height="661dp"
-        android:background="@color/blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/TDEE"
+        android:layout_width="77dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/darkback"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/cal"
+        app:layout_constraintTop_toBottomOf="@+id/everyday" />
 
     <Button
         android:id="@+id/table"
@@ -100,139 +100,63 @@
         />
 
     <TextView
-        android:id="@+id/word"
-        android:layout_width="376dp"
-        android:layout_height="198dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/darkblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/back" />
-
-    <TextView
-        android:id="@+id/total"
+        android:id="@+id/allCal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="249dp"
+        android:layout_marginRight="249dp"
         android:text="總攝取熱量"
-        android:textColor="#FFFFFF"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="@+id/word"
-        app:layout_constraintTop_toTopOf="@+id/word" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cal2"
-        android:layout_width="35dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="96dp"
-        android:text="kcal"
-        android:textColor="#FFFFFF"
-        android:textSize="40px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/totalresult"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/dollor"
-        android:layout_width="35dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="144dp"
-        android:text="元"
-        android:textColor="#FFFFFF"
-        android:textSize="40px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/totalresult"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/remaining"
+        android:id="@+id/allPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="剩餘熱量"
-        android:textColor="#FFFFFF"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.623"
-        app:layout_constraintStart_toStartOf="@+id/word"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="16dp"
         android:text="金額"
-        android:textColor="#FFFFFF"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.655"
-        app:layout_constraintStart_toStartOf="@+id/word"
-        app:layout_constraintTop_toTopOf="@+id/word" />
+        app:layout_constraintEnd_toEndOf="@+id/leftCal"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/leftCal"
+        app:layout_constraintTop_toBottomOf="@+id/leftCal" />
 
     <TextView
-        android:id="@+id/totalresult"
-        android:layout_width="64dp"
+        android:id="@+id/leftCal"
+        android:layout_width="69dp"
         android:layout_height="21dp"
-        android:layout_marginTop="32dp"
-        android:textColor="#FFFFFF"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.645"
-        app:layout_constraintStart_toEndOf="@+id/total"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/remainingresult"
-        android:layout_width="64dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="92dp"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toEndOf="@+id/total"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/moneyresult"
-        android:layout_width="64dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="144dp"
-        android:textSize="55px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toEndOf="@+id/total"
-        app:layout_constraintTop_toTopOf="@+id/word" />
-
-    <TextView
-        android:id="@+id/cal"
-        android:layout_width="35dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="40dp"
-        android:text="kcal"
-        android:textColor="#FFFFFF"
-        android:textSize="40px"
-        app:layout_constraintEnd_toEndOf="@+id/word"
+        android:layout_marginTop="20dp"
+        android:text="剩餘熱量"
+        app:layout_constraintEnd_toEndOf="@+id/allCal"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/totalresult"
-        app:layout_constraintTop_toTopOf="@+id/word" />
+        app:layout_constraintStart_toStartOf="@+id/allCal"
+        app:layout_constraintTop_toBottomOf="@+id/allCal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="387dp"
+        android:layout_height="236dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBt" />
 
     <Button
-        android:id="@+id/additem"
-        android:layout_width="110dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/loginbar"
+        android:id="@+id/addBt"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
         android:text="新增"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/word" />
-
+        app:layout_constraintTop_toBottomOf="@+id/allPrice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
